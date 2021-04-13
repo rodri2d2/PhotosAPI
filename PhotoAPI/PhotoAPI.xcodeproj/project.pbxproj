@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5BC39E4A262609B200DFB699 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E49262609B200DFB699 /* Album.swift */; };
 		5BC39E5326260AE800DFB699 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E5226260AE800DFB699 /* Photos.swift */; };
+		5BC39E5C2626100500DFB699 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E5B2626100500DFB699 /* HTTPMethods.swift */; };
+		5BC39E602626156C00DFB699 /* APIResquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E5F2626156C00DFB699 /* APIResquest.swift */; };
+		5BC39E6326261F6200DFB699 /* APIPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E6226261F6200DFB699 /* APIPaths.swift */; };
+		5BC39E6C2626253D00DFB699 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E6B2626253D00DFB699 /* NetworkService.swift */; };
+		5BC39E6F2626256300DFB699 /* AllAlbumsResquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E6E2626256300DFB699 /* AllAlbumsResquest.swift */; };
+		5BC39E72262625B100DFB699 /* AllAlbumsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E71262625B100DFB699 /* AllAlbumsResponse.swift */; };
 		5BF5BC9C2626025100203EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5BC9B2626025100203EE2 /* AppDelegate.swift */; };
 		5BF5BC9E2626025100203EE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5BC9D2626025100203EE2 /* SceneDelegate.swift */; };
 		5BF5BCA02626025100203EE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5BC9F2626025100203EE2 /* ViewController.swift */; };
@@ -19,6 +25,12 @@
 /* Begin PBXFileReference section */
 		5BC39E49262609B200DFB699 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		5BC39E5226260AE800DFB699 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		5BC39E5B2626100500DFB699 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		5BC39E5F2626156C00DFB699 /* APIResquest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResquest.swift; sourceTree = "<group>"; };
+		5BC39E6226261F6200DFB699 /* APIPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPaths.swift; sourceTree = "<group>"; };
+		5BC39E6B2626253D00DFB699 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5BC39E6E2626256300DFB699 /* AllAlbumsResquest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAlbumsResquest.swift; sourceTree = "<group>"; };
+		5BC39E71262625B100DFB699 /* AllAlbumsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAlbumsResponse.swift; sourceTree = "<group>"; };
 		5BF5BC982626025100203EE2 /* PhotoAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF5BC9B2626025100203EE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF5BC9D2626025100203EE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +132,50 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		5BC39E5726260FC000DFB699 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E5826260FDE00DFB699 /* Utils */,
+				5BC39E5A26260FED00DFB699 /* ResponseModels */,
+				5BC39E5926260FE300DFB699 /* RequestModels */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BC39E5826260FDE00DFB699 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E5B2626100500DFB699 /* HTTPMethods.swift */,
+				5BC39E5F2626156C00DFB699 /* APIResquest.swift */,
+				5BC39E6226261F6200DFB699 /* APIPaths.swift */,
+				5BC39E6B2626253D00DFB699 /* NetworkService.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5BC39E5926260FE300DFB699 /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E6E2626256300DFB699 /* AllAlbumsResquest.swift */,
+			);
+			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		5BC39E5A26260FED00DFB699 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E71262625B100DFB699 /* AllAlbumsResponse.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		5BC39E65262622ED00DFB699 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5BF5BC8F2626025100203EE2 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				5BF5BCB12626028100203EE2 /* App */,
+				5BC39E65262622ED00DFB699 /* Extensions */,
+				5BC39E5726260FC000DFB699 /* Network */,
 				5BC39E442626095700DFB699 /* Albums */,
 				5BC39E4D26260AAF00DFB699 /* Photos */,
 				5BF5BCA42626025300203EE2 /* Assets.xcassets */,
@@ -229,8 +287,14 @@
 			files = (
 				5BF5BCA02626025100203EE2 /* ViewController.swift in Sources */,
 				5BF5BC9C2626025100203EE2 /* AppDelegate.swift in Sources */,
+				5BC39E5C2626100500DFB699 /* HTTPMethods.swift in Sources */,
+				5BC39E72262625B100DFB699 /* AllAlbumsResponse.swift in Sources */,
+				5BC39E6326261F6200DFB699 /* APIPaths.swift in Sources */,
+				5BC39E6C2626253D00DFB699 /* NetworkService.swift in Sources */,
 				5BF5BC9E2626025100203EE2 /* SceneDelegate.swift in Sources */,
 				5BC39E5326260AE800DFB699 /* Photos.swift in Sources */,
+				5BC39E6F2626256300DFB699 /* AllAlbumsResquest.swift in Sources */,
+				5BC39E602626156C00DFB699 /* APIResquest.swift in Sources */,
 				5BC39E4A262609B200DFB699 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
