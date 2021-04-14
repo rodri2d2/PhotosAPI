@@ -17,6 +17,7 @@ enum APIPath: String, CaseIterable {
     case photosPerAlbum = "/albums/{id}/photos"
     case allUsers       = "/users"
     case albumsPerUser  = "/users/{id}/albums"
+    case userById       = "/users/{id}"
     
     var path: String{ return self.rawValue }
     

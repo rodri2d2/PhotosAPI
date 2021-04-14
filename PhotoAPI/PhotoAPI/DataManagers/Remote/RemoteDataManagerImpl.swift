@@ -36,7 +36,7 @@ class RemoteDataManagerProtocolImpl{
 
 
 extension RemoteDataManagerProtocolImpl: RemoteDataManagerProtocol{
-
+    
     func fetchAllAlbums(completion: @escaping (Result<[Album]?, Error>) -> ()) {
         let request = AllAlbumRequest()
         networkService.fetchData(this: request, for: completion)
@@ -61,5 +61,8 @@ extension RemoteDataManagerProtocolImpl: RemoteDataManagerProtocol{
         let request = PhotosPerAlbumResquest(albumId: albumId)
         networkService.fetchData(this: request, for: completion)
     }
-
+    
+    func fetchImage(imageUrl: String, size: String, completion: @escaping (Data) -> ()) {
+        networkService.fetchImage(imageUrl: imageUrl, size: size, completion: completion)
+    }
 }
