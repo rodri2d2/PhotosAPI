@@ -8,14 +8,14 @@
 import Foundation
 
 
-class RemoteDataManagerProtocolImpl{
+class RemoteDataManagerImpl{
     
     // MARK: - Class Properties
     let networkService: NetworkService
     
     // MARK: - Lifecycle
-    init(networkService: NetworkService) {
-        self.networkService = networkService
+    init(service: NetworkService) {
+        self.networkService = service
     }
 }
 
@@ -35,7 +35,7 @@ class RemoteDataManagerProtocolImpl{
 
 
 
-extension RemoteDataManagerProtocolImpl: RemoteDataManagerProtocol{
+extension RemoteDataManagerImpl: RemoteDataManagerProtocol{
     
     func fetchAllAlbums(completion: @escaping (Result<[Album]?, Error>) -> ()) {
         let request = AllAlbumRequest()

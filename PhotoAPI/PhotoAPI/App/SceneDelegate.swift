@@ -21,14 +21,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         /// 3. Create view hierarchy and apply it to the window
-        let controller = ViewController()
+        let controller = setupViewController()
         window?.rootViewController = UINavigationController(rootViewController: controller)
         
         /// 4. Make the window visible
         window?.makeKeyAndVisible()
-        
-        
     }
+    
+    
+//    // MARK: - Because this app will be kept simple, this function abstract a bit more to simulate a Coordinator protocol and pattern
+    private func setupViewController() -> UIViewController {
+        let networkService      = NetworkService()
+        let remoteManager       = RemoteDataManagerImpl(service: networkService)
+        let albumDataManager    = DataManager(remote: remoteManager)
+        let albumViewModel      = AlbumViewModel(manager: albumDataManager)
+        let controller          = ViewController(viewModel: albumViewModel)
+        return controller
+    }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
