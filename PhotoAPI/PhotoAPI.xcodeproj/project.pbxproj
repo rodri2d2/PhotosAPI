@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B468DE32626F470003930D8 /* AlbumPerUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B468DE22626F470003930D8 /* AlbumPerUsersRequest.swift */; };
+		5B468DEF2626F4CB003930D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B468DEE2626F4CB003930D8 /* User.swift */; };
+		5B468E012627218B003930D8 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B468E002627218B003930D8 /* Responses.swift */; };
+		5B468E0526272883003930D8 /* AllUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B468E0426272883003930D8 /* AllUsersRequest.swift */; };
+		5B509E322626DB4E009A0B00 /* PhotoAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B509E312626DB4E009A0B00 /* PhotoAPIRequestTests.swift */; };
+		5B509E422626EDBD009A0B00 /* AllPhotosResquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B509E412626EDBD009A0B00 /* AllPhotosResquest.swift */; };
+		5B509E482626F006009A0B00 /* PhotosPerAlbumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B509E472626F006009A0B00 /* PhotosPerAlbumRequest.swift */; };
+		5BC39E4A262609B200DFB699 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E49262609B200DFB699 /* Album.swift */; };
+		5BC39E5326260AE800DFB699 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E5226260AE800DFB699 /* Photo.swift */; };
+		5BC39E5C2626100500DFB699 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E5B2626100500DFB699 /* HTTPMethods.swift */; };
+		5BC39E602626156C00DFB699 /* APIResquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E5F2626156C00DFB699 /* APIResquest.swift */; };
+		5BC39E6326261F6200DFB699 /* APIPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E6226261F6200DFB699 /* APIPaths.swift */; };
+		5BC39E6C2626253D00DFB699 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E6B2626253D00DFB699 /* NetworkService.swift */; };
+		5BC39E6F2626256300DFB699 /* AllAlbumsResquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC39E6E2626256300DFB699 /* AllAlbumsResquest.swift */; };
 		5BF5BC9C2626025100203EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5BC9B2626025100203EE2 /* AppDelegate.swift */; };
 		5BF5BC9E2626025100203EE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5BC9D2626025100203EE2 /* SceneDelegate.swift */; };
 		5BF5BCA02626025100203EE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5BC9F2626025100203EE2 /* ViewController.swift */; };
@@ -14,7 +28,33 @@
 		5BF5BCA82626025300203EE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5BCA62626025300203EE2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5B509E342626DB4E009A0B00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF5BC902626025100203EE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BF5BC972626025100203EE2;
+			remoteInfo = PhotoAPI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5B468DE22626F470003930D8 /* AlbumPerUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPerUsersRequest.swift; sourceTree = "<group>"; };
+		5B468DEE2626F4CB003930D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5B468E002627218B003930D8 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		5B468E0426272883003930D8 /* AllUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersRequest.swift; sourceTree = "<group>"; };
+		5B509E2F2626DB4E009A0B00 /* PhotoAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B509E312626DB4E009A0B00 /* PhotoAPIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIRequestTests.swift; sourceTree = "<group>"; };
+		5B509E332626DB4E009A0B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B509E412626EDBD009A0B00 /* AllPhotosResquest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosResquest.swift; sourceTree = "<group>"; };
+		5B509E472626F006009A0B00 /* PhotosPerAlbumRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPerAlbumRequest.swift; sourceTree = "<group>"; };
+		5BC39E49262609B200DFB699 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		5BC39E5226260AE800DFB699 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		5BC39E5B2626100500DFB699 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		5BC39E5F2626156C00DFB699 /* APIResquest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResquest.swift; sourceTree = "<group>"; };
+		5BC39E6226261F6200DFB699 /* APIPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPaths.swift; sourceTree = "<group>"; };
+		5BC39E6B2626253D00DFB699 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5BC39E6E2626256300DFB699 /* AllAlbumsResquest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAlbumsResquest.swift; sourceTree = "<group>"; };
 		5BF5BC982626025100203EE2 /* PhotoAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF5BC9B2626025100203EE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF5BC9D2626025100203EE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B509E2C2626DB4E009A0B00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF5BC952626025100203EE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +82,165 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B468DEC2626F4B4003930D8 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				5B468DED2626F4BE003930D8 /* Models */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		5B468DED2626F4BE003930D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B468DEE2626F4CB003930D8 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B509E302626DB4E009A0B00 /* PhotoAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B509E312626DB4E009A0B00 /* PhotoAPIRequestTests.swift */,
+				5B509E332626DB4E009A0B00 /* Info.plist */,
+			);
+			path = PhotoAPITests;
+			sourceTree = "<group>";
+		};
+		5BC39E442626095700DFB699 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E482626099800DFB699 /* Controllers */,
+				5BC39E452626096600DFB699 /* Models */,
+				5BC39E462626097100DFB699 /* Views */,
+				5BC39E472626097F00DFB699 /* ViewModels */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		5BC39E452626096600DFB699 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E49262609B200DFB699 /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BC39E462626097100DFB699 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BC39E472626097F00DFB699 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BC39E482626099800DFB699 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BF5BC9F2626025100203EE2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BC39E4D26260AAF00DFB699 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E5126260AD800DFB699 /* Controllers */,
+				5BC39E4E26260AB800DFB699 /* Models */,
+				5BC39E4F26260ABD00DFB699 /* Views */,
+				5BC39E5026260AC300DFB699 /* ViewModels */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		5BC39E4E26260AB800DFB699 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E5226260AE800DFB699 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BC39E4F26260ABD00DFB699 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BC39E5026260AC300DFB699 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BC39E5126260AD800DFB699 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BC39E5726260FC000DFB699 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E5826260FDE00DFB699 /* Utils */,
+				5BC39E5A26260FED00DFB699 /* ResponseModels */,
+				5BC39E5926260FE300DFB699 /* RequestModels */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BC39E5826260FDE00DFB699 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5BC39E5B2626100500DFB699 /* HTTPMethods.swift */,
+				5BC39E5F2626156C00DFB699 /* APIResquest.swift */,
+				5BC39E6226261F6200DFB699 /* APIPaths.swift */,
+				5BC39E6B2626253D00DFB699 /* NetworkService.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5BC39E5926260FE300DFB699 /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B509E472626F006009A0B00 /* PhotosPerAlbumRequest.swift */,
+				5B468DE22626F470003930D8 /* AlbumPerUsersRequest.swift */,
+				5BC39E6E2626256300DFB699 /* AllAlbumsResquest.swift */,
+				5B509E412626EDBD009A0B00 /* AllPhotosResquest.swift */,
+				5B468E0426272883003930D8 /* AllUsersRequest.swift */,
+			);
+			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		5BC39E5A26260FED00DFB699 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B468E002627218B003930D8 /* Responses.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		5BC39E65262622ED00DFB699 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5BF5BC8F2626025100203EE2 = {
 			isa = PBXGroup;
 			children = (
 				5BF5BC9A2626025100203EE2 /* PhotoAPI */,
+				5B509E302626DB4E009A0B00 /* PhotoAPITests */,
 				5BF5BC992626025100203EE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF5BC982626025100203EE2 /* PhotoAPI.app */,
+				5B509E2F2626DB4E009A0B00 /* PhotoAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,7 +258,11 @@
 			isa = PBXGroup;
 			children = (
 				5BF5BCB12626028100203EE2 /* App */,
-				5BF5BC9F2626025100203EE2 /* ViewController.swift */,
+				5BC39E65262622ED00DFB699 /* Extensions */,
+				5BC39E5726260FC000DFB699 /* Network */,
+				5BC39E442626095700DFB699 /* Albums */,
+				5BC39E4D26260AAF00DFB699 /* Photos */,
+				5B468DEC2626F4B4003930D8 /* Users */,
 				5BF5BCA42626025300203EE2 /* Assets.xcassets */,
 			);
 			path = PhotoAPI;
@@ -75,6 +282,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B509E2E2626DB4E009A0B00 /* PhotoAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B509E382626DB4E009A0B00 /* Build configuration list for PBXNativeTarget "PhotoAPITests" */;
+			buildPhases = (
+				5B509E2B2626DB4E009A0B00 /* Sources */,
+				5B509E2C2626DB4E009A0B00 /* Frameworks */,
+				5B509E2D2626DB4E009A0B00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B509E352626DB4E009A0B00 /* PBXTargetDependency */,
+			);
+			name = PhotoAPITests;
+			productName = PhotoAPITests;
+			productReference = 5B509E2F2626DB4E009A0B00 /* PhotoAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5BF5BC972626025100203EE2 /* PhotoAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BF5BCAC2626025300203EE2 /* Build configuration list for PBXNativeTarget "PhotoAPI" */;
@@ -101,6 +326,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					5B509E2E2626DB4E009A0B00 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5BF5BC972626025100203EE2;
+					};
 					5BF5BC972626025100203EE2 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -120,11 +349,19 @@
 			projectRoot = "";
 			targets = (
 				5BF5BC972626025100203EE2 /* PhotoAPI */,
+				5B509E2E2626DB4E009A0B00 /* PhotoAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B509E2D2626DB4E009A0B00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF5BC962626025100203EE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,17 +374,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B509E2B2626DB4E009A0B00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B509E322626DB4E009A0B00 /* PhotoAPIRequestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF5BC942626025100203EE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5BF5BCA02626025100203EE2 /* ViewController.swift in Sources */,
 				5BF5BC9C2626025100203EE2 /* AppDelegate.swift in Sources */,
+				5BC39E5C2626100500DFB699 /* HTTPMethods.swift in Sources */,
+				5B509E422626EDBD009A0B00 /* AllPhotosResquest.swift in Sources */,
+				5BC39E6326261F6200DFB699 /* APIPaths.swift in Sources */,
+				5BC39E6C2626253D00DFB699 /* NetworkService.swift in Sources */,
+				5B468E0526272883003930D8 /* AllUsersRequest.swift in Sources */,
+				5B468DE32626F470003930D8 /* AlbumPerUsersRequest.swift in Sources */,
+				5B468DEF2626F4CB003930D8 /* User.swift in Sources */,
 				5BF5BC9E2626025100203EE2 /* SceneDelegate.swift in Sources */,
+				5BC39E5326260AE800DFB699 /* Photo.swift in Sources */,
+				5BC39E6F2626256300DFB699 /* AllAlbumsResquest.swift in Sources */,
+				5B468E012627218B003930D8 /* Responses.swift in Sources */,
+				5BC39E602626156C00DFB699 /* APIResquest.swift in Sources */,
+				5B509E482626F006009A0B00 /* PhotosPerAlbumRequest.swift in Sources */,
+				5BC39E4A262609B200DFB699 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B509E352626DB4E009A0B00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BF5BC972626025100203EE2 /* PhotoAPI */;
+			targetProxy = 5B509E342626DB4E009A0B00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5BF5BCA62626025300203EE2 /* LaunchScreen.storyboard */ = {
@@ -161,6 +427,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5B509E362626DB4E009A0B00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Q7F87669V;
+				INFOPLIST_FILE = PhotoAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.rodri.PhotoAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoAPI.app/PhotoAPI";
+			};
+			name = Debug;
+		};
+		5B509E372626DB4E009A0B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Q7F87669V;
+				INFOPLIST_FILE = PhotoAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.rodri.PhotoAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoAPI.app/PhotoAPI";
+			};
+			name = Release;
+		};
 		5BF5BCAA2626025300203EE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -318,6 +624,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B509E382626DB4E009A0B00 /* Build configuration list for PBXNativeTarget "PhotoAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B509E362626DB4E009A0B00 /* Debug */,
+				5B509E372626DB4E009A0B00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5BF5BC932626025100203EE2 /* Build configuration list for PBXProject "PhotoAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
