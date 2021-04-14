@@ -15,6 +15,27 @@ class NetworkService: NSObject{
         let session = URLSession(configuration: configuration)
         return session
     }()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MARK: - Fetch Data
+extension NetworkService{
     
     func fetchData<T: APIRequest>(this resquest: T, for completion: @escaping(Result<T.Response?, Error>) -> Void){
 
@@ -55,6 +76,37 @@ class NetworkService: NSObject{
         
         task.resume()
     }
-    
-    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MARK: - Fetch Image
+extension NetworkService{
+    func fetchImage(imageUrl: String, size: String, completion: @escaping (Data) -> ()) {
+        DispatchQueue.global(qos: .default).async {
+            
+            let sanatizedImageUrl = imageUrl.replacingOccurrences(of: "200", with: size)
+            if let url = URL(string: sanatizedImageUrl),
+               let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    completion(data)
+                }
+            }
+        }
+    }
 }
