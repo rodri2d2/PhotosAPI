@@ -6,11 +6,11 @@
 //
 
 import Foundation
-struct Photos {
+struct Photo: Codable {
     
     let id:           Int
     let albumId:      Int
     let title:        String
     let url:          String
-    let thumbNailUrl: String
+    let thumbnailUrl: String
 }

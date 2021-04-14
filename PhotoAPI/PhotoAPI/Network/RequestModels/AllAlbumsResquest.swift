@@ -11,5 +11,5 @@ import Foundation
 struct AllAlbumRequest: APIRequest {
     var http: HTTPMethod = .get
     var path: String     = APIPath.allAlbums.path
-    typealias Response = AllAlbumsResponse
+    typealias Response   = [Album]
 }

@@ -30,7 +30,7 @@ extension APIRequest{
             return baseURL
         }
         //
-        set{  }
+        set{}
     }
     
     func baseRequest() -> URLRequest {
@@ -40,6 +40,4 @@ extension APIRequest{
         request.httpMethod = http.method
         return request
     }
-    
-    
 }
