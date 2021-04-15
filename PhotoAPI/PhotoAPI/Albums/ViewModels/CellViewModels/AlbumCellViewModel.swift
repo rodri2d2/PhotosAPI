@@ -14,6 +14,7 @@ class AlbumCellViewModel{
     let userIdText:  Int
     let titleText:   String
     var imageData:   Data?
+    let album:       Album
     let dataManager: AlbumDataManagerProtocol
     var delegate:    AlbumCellViewModelDelegate?
     
@@ -34,9 +35,10 @@ class AlbumCellViewModel{
     
     // MARK: - Lifecycle
     init(album: Album, dataManager: AlbumDataManagerProtocol) {
-        self.idText      = album.id
-        self.userIdText  = album.userId
-        self.titleText   = album.title
+        self.album       = album
+        self.idText      = self.album.id
+        self.userIdText  = self.album.userId
+        self.titleText   = self.album.title
         self.dataManager = dataManager
     }
 }

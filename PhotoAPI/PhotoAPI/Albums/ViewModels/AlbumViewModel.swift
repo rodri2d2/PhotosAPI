@@ -12,10 +12,10 @@ class AlbumViewModel{
     
     // MARK: - Class properties
     private var lastLoad:    Date?
-    private let dataManager: AlbumDataManagerProtocol
     private var albumList:   [AlbumCellViewModel] = []
     private var albumIds:    [Int]   = []
     private var imageInfo:   [Photo] = []
+    let dataManager:         AlbumDataManagerProtocol
     var delegate:            AlbumViewModelDelegate?
     var imageUrl:            String?
     

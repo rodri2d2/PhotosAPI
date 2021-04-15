@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     // MARK: - Class properties
     let viewModel: AlbumViewModel!
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
 
 
 // MARK: - Extension for Outlets setup and styling
-extension ViewController {
+extension MainViewController {
     
     
     //Navigation controller
@@ -101,6 +101,7 @@ extension ViewController {
         setNeedsStatusBarAppearanceUpdate()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.backgroundColor = .black
+        self.navigationController?.navigationBar.tintColor = .yellow
         self.navigationController?.navigationBar.largeTitleTextAttributes  = [.foregroundColor: UIColor.white]
     }
     
@@ -143,16 +144,13 @@ extension ViewController {
 
 
 // MARK: - Extension for UICollectionViewDataSource
-extension ViewController: UICollectionViewDataSource{
+extension MainViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.viewModel.numberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-        
-        
         if let cellViewModel = viewModel.cellViewModel(at: indexPath){
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? AlbumCell{
                 cell.viewModel = cellViewModel
@@ -166,9 +164,14 @@ extension ViewController: UICollectionViewDataSource{
 }
 
 // MARK: - Extension for UICollectionViewDelegateFlowLayout
-extension ViewController: UICollectionViewDelegateFlowLayout{
+extension MainViewController: UICollectionViewDelegateFlowLayout{
     
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectAlbum(indexPath: indexPath)
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let width  =  self.view.bounds.width - 32
@@ -195,8 +198,45 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
 
 
 
+// MARK: - Class functionalities
+extension  MainViewController{
+    
+    
+    private func didSelectAlbum(indexPath: IndexPath){
 
-extension ViewController: AlbumViewModelDelegate{
+        /*
+         
+            In this case better implement Coordinator Pattern
+         
+         */
+        
+        let networkService      = NetworkService()
+        let remoteManager       = RemoteDataManagerImpl(service: networkService)
+        let photoDataManager    = DataManager(remote: remoteManager)
+        
+        if let album = viewModel.cellViewModel(at: indexPath){
+            
+            let photoViewModel = PhotosViewModel(dataManager: photoDataManager, album: album.album)
+            let photosViewController = PhotosViewController(viewModel: photoViewModel)
+            navigationController?.pushViewController(photosViewController, animated: true)
+        }
+        
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+// MARK: - Extension for AlbumViewModelDelegate
+extension MainViewController: AlbumViewModelDelegate{
     func didFinishLoad() {
         self.collectionView.reloadData()
     }

@@ -35,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let remoteManager       = RemoteDataManagerImpl(service: networkService)
         let albumDataManager    = DataManager(remote: remoteManager)
         let albumViewModel      = AlbumViewModel(manager: albumDataManager)
-        let controller          = ViewController(viewModel: albumViewModel)
+        let controller          = MainViewController(viewModel: albumViewModel)
         return controller
     }
     
