@@ -95,8 +95,7 @@ extension MainViewController {
     
     private func setupNavigationController(){
         self.title = "Albums"
-        
- 
+    
     
         setNeedsStatusBarAppearanceUpdate()
         self.navigationController?.navigationBar.prefersLargeTitles = true

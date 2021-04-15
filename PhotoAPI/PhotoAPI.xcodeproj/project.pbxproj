@@ -47,6 +47,7 @@
 		5BF9EC0526286CF000139A0E /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC0426286CF000139A0E /* PhotosCell.swift */; };
 		5BF9EC0A26286D6C00139A0E /* PhotosCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC0926286D6C00139A0E /* PhotosCellViewModel.swift */; };
 		5BF9EC10262870C400139A0E /* PhotoCellViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC0F262870C400139A0E /* PhotoCellViewModelDelegate.swift */; };
+		5BF9EC1C26287E6400139A0E /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC1B26287E6400139A0E /* PhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		5BF9EC0426286CF000139A0E /* PhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
 		5BF9EC0926286D6C00139A0E /* PhotosCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCellViewModel.swift; sourceTree = "<group>"; };
 		5BF9EC0F262870C400139A0E /* PhotoCellViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModelDelegate.swift; sourceTree = "<group>"; };
+		5BF9EC1B26287E6400139A0E /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF9EBFC262864A200139A0E /* PhotosViewController.swift */,
+				5BF9EC1B26287E6400139A0E /* PhotoDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				5BF9EBFD262864A200139A0E /* PhotosViewController.swift in Sources */,
 				5B468E4C26275FDF003930D8 /* AlbumViewModel.swift in Sources */,
 				5BC39E6326261F6200DFB699 /* APIPaths.swift in Sources */,
+				5BF9EC1C26287E6400139A0E /* PhotoDetailViewController.swift in Sources */,
 				5BC39E6C2626253D00DFB699 /* NetworkService.swift in Sources */,
 				5B468E2E26273616003930D8 /* ImageService.swift in Sources */,
 				5B468E0526272883003930D8 /* AllUsersRequest.swift in Sources */,

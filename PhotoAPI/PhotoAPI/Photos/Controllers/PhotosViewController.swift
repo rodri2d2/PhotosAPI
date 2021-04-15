@@ -127,7 +127,7 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout{
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+            didSelectPhoto(indexPath: indexPath)
     }
     
     
@@ -146,6 +146,45 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MARK: - Class functionalities
+extension  PhotosViewController{
+    
+    
+    private func didSelectPhoto(indexPath: IndexPath){
+
+        /*
+         
+            In this case better implement Coordinator Pattern
+         
+         */
+            
+    
+       let photoCell = viewModel.cellViewModel(at: indexPath)
+        if let imageData = photoCell?.photoData  {
+            let vc = PhotoDetailViewController(image: imageData)
+            present(vc, animated: true, completion: nil)
+        }
+
     }
     
 }
