@@ -10,18 +10,33 @@ import Foundation
 class AlbumCellViewModel{
     
     // MARK: - Class properties
-    let dataManager: AlbumDataManagerProtocol
-    let album:       Album
     let idText:      Int
     let userIdText:  Int
     let titleText:   String
+    var imageData:   Data?
+    let dataManager: AlbumDataManagerProtocol
+    var delegate:    AlbumCellViewModelDelegate?
+    
+    
+    
+    var imageUrl: String? {
+        didSet{
+            
+            guard let imageUrl = self.imageUrl else { return  }
+            
+            self.dataManager.fetchImage(imageUrl: imageUrl, size: 725) { (data) in
+                self.imageData = data
+                self.delegate?.didFinishLoadImage()
+            }
+        }
+    }
+    
     
     // MARK: - Lifecycle
     init(album: Album, dataManager: AlbumDataManagerProtocol) {
-        self.album       = album
-        self.idText      = self.album.id
-        self.userIdText  = self.album.userId
-        self.titleText   = self.album.title
+        self.idText      = album.id
+        self.userIdText  = album.userId
+        self.titleText   = album.title
         self.dataManager = dataManager
     }
 }

@@ -62,11 +62,16 @@ extension DataManager: AlbumDataManagerProtocol{
 
 // MARK: - Extesion for Image Service
 extension DataManager: ImageService{
-    func fetchImage(imageUrl: String, size: String, completion: @escaping (Data) -> ()) {
+
+    func fetchImagePerAlbum(albumId: Int, completion: @escaping (Result<[Photo]?, Error>) -> ()) {
+        self.remoteManager.fetchPhotosPerAlbum(albumId: albumId, completion: completion)
+    }
+
+    
+    func fetchImage(imageUrl: String, size: Int, completion: @escaping (Data) -> ()) {
+        self.remoteManager.fetchImage(imageUrl: imageUrl, size: size, completion: completion)
     }
 }
-
-
 
 
 

@@ -11,10 +11,13 @@ import Foundation
 class AlbumViewModel{
     
     // MARK: - Class properties
-    var lastLoad:    Date?
-    let dataManager: AlbumDataManagerProtocol
-    var delegate:    AlbumViewModelDelegate?
-    var albumList:   [AlbumCellViewModel] = []
+    private var lastLoad:    Date?
+    private let dataManager: AlbumDataManagerProtocol
+    private var albumList:   [AlbumCellViewModel] = []
+    private var albumIds:    [Int]   = []
+    private var imageInfo:   [Photo] = []
+    var delegate:            AlbumViewModelDelegate?
+    var imageUrl:            String?
     
     // MARK: - Lifecycle
     init(manager: AlbumDataManagerProtocol) {
@@ -39,7 +42,7 @@ extension AlbumViewModel{
             switch result{
             //
             case .success(let response):
-                
+
                 if let albums = response{
                     self.prepare(albums: albums)
                 }
@@ -66,8 +69,37 @@ extension AlbumViewModel{
         }
         delegate?.didFinishLoad()
     }
+   
     
+    private func loadImages(indexPath: IndexPath){
+        
+        let albumId = albumList[indexPath.row].idText
+        if !albumIds.contains(albumList[indexPath.row].idText){
+            albumIds.append(albumId)
+            downloadPhotoInfo(indexPath: indexPath, albumId: albumId)
+        } else {
+            
+            albumList[indexPath.row].imageUrl = imageInfo[indexPath.row].url
+            
+        }
+    }
     
+    private func downloadPhotoInfo(indexPath: IndexPath, albumId: Int){
+        dataManager.fetchImagePerAlbum(albumId: albumId) { [self] (result) in
+            switch result {
+            case .success(let response):
+                guard let response = response else { return  }
+                imageInfo.append(contentsOf: response)
+                albumList[indexPath.row].imageUrl = response.randomElement()?.url
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    private func prepareImage(image: [Photo]){
+        self.imageInfo.append(contentsOf: image.map({ $0 }))
+    }
 }
 
 
@@ -81,6 +113,7 @@ extension AlbumViewModel{
 extension AlbumViewModel{
     
     func viewWasLoad() {
+        
         if lastLoad == nil {
             lastLoad = Date()
             loadDataFromServer()
@@ -93,6 +126,8 @@ extension AlbumViewModel{
         }
     }
     
+
+    
     func numberOfItems() -> Int{
         return albumList.count
     }
@@ -100,6 +135,7 @@ extension AlbumViewModel{
     
     func cellViewModel(at indexPath: IndexPath) -> AlbumCellViewModel?{
         guard indexPath.row < albumList.count else { return nil }
+        loadImages(indexPath: indexPath)
         return albumList[indexPath.row]
     }
     

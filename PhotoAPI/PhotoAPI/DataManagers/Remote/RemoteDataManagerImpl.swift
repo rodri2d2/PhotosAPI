@@ -62,7 +62,7 @@ extension RemoteDataManagerImpl: RemoteDataManagerProtocol{
         networkService.fetchData(this: request, for: completion)
     }
     
-    func fetchImage(imageUrl: String, size: String, completion: @escaping (Data) -> ()) {
+    func fetchImage(imageUrl: String, size: Int, completion: @escaping (Data) -> ()) {
         networkService.fetchImage(imageUrl: imageUrl, size: size, completion: completion)
     }
 }
