@@ -16,5 +16,5 @@ protocol RemoteDataManagerProtocol {
     func fetchPhotosPerAlbum(albumId: Int, completion: @escaping (Result<[Photo]?, Error>) -> ())
     
     //Image Service
-    func fetchImage(imageUrl: String, size: String, completion: @escaping (Data) -> ())
+    func fetchImage(imageUrl: String, size: Int, completion: @escaping (Data) -> ())
 }

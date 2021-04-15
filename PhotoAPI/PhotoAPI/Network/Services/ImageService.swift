@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ImageService {
-    func fetchImage(imageUrl: String, size: String, completion: @escaping (_ imageData: Data)-> ())
+    func fetchImage(imageUrl: String, size: Int, completion: @escaping (_ imageData: Data)-> ())
+    func fetchImagePerAlbum(albumId: Int, completion: @escaping (Result<[Photo]?, Error>) -> ())
 }
 

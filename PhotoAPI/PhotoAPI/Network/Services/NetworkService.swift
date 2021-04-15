@@ -97,10 +97,10 @@ extension NetworkService{
 
 // MARK: - Fetch Image
 extension NetworkService{
-    func fetchImage(imageUrl: String, size: String, completion: @escaping (Data) -> ()) {
+    func fetchImage(imageUrl: String, size: Int, completion: @escaping (Data) -> ()) {
         DispatchQueue.global(qos: .default).async {
             
-            let sanatizedImageUrl = imageUrl.replacingOccurrences(of: "200", with: size)
+            let sanatizedImageUrl = imageUrl.replacingOccurrences(of: "600", with: "\(size)")
             if let url = URL(string: sanatizedImageUrl),
                let data = try? Data(contentsOf: url) {
                 DispatchQueue.main.async {
