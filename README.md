@@ -22,10 +22,10 @@ Actually, the main goals are:
 > NOTE: App not finished yet
 
 ### This app will implement:
-- [ ] URLSession
-- [ ] DispatchQueue
-- [ ] MVVM
-- [ ] NO Storyboard
+- [X] URLSession
+- [X] DispatchQueue
+- [X] MVVM
+- [X] NO Storyboard
 
 <br />
 
@@ -33,7 +33,7 @@ Actually, the main goals are:
 ## Samples
 
 <p float="left">
- Not available!
+<img src="https://github.com/rodri2d2/PhotosAPI/blob/develop/Gifs/sample1.gif" width="200" />
 <br />
 
 > ## Author
